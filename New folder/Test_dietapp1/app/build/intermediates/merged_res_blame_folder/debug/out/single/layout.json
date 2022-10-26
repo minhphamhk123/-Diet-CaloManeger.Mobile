@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-mergeDebugResources-43:\\layout\\fragment_notifications.xml",
+        "source": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-main-46:\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "com.example.test_dietapp1.app-mergeDebugResources-43:/layout/fragment_home.xml",
+        "source": "com.example.test_dietapp1.app-main-46:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-mergeDebugResources-43:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-main-46:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-mergeDebugResources-43:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-main-46:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-mergeDebugResources-43:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-main-46:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-mergeDebugResources-43:\\layout\\fragment_scrolling_homepage.xml",
+        "source": "C:\\Users\\minhp\\.gradle\\daemon\\7.4\\com.example.test_dietapp1.app-main-46:\\layout\\fragment_scrolling_homepage.xml"
+    }
+]
