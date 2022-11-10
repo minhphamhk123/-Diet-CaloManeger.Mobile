@@ -22,9 +22,4 @@
         android:name="com.example.test_dietapp1.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-    <fragment
-        android:id="@+id/scrollingFragment_homepage"
-        android:name="com.example.test_dietapp1.ScrollingFragment_homepage"
-        android:label="fragment_scrolling_homepage"
-        tools:layout="@layout/fragment_scrolling_homepage" />
 </navigation>
