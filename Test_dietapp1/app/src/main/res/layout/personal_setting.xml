@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/header_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/per_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"></ImageButton>
+
+            <TextView
+                android:id="@+id/per_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/per_image"
+                android:text="Minh Nhật Phạm"></TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="30dp">
+
+            <ImageButton
+                android:id="@+id/ic_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:background="none"
+                android:src="@drawable/ic_baseline_settings_24"></ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ic_setting"
+                android:text="Cài đặt"></TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <Button
+            android:id="@+id/btn_diary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:text="Nhật ký"
+            android:textSize="7dp"
+            android:layout_marginLeft="30dp"></Button>
+
+        <Button
+            android:id="@+id/btn_food"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="Món ăn"
+            android:textSize="7dp"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"></Button>\
+
+        <Button
+            android:id="@+id/btn_per"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="Cá nhân"
+            android:textSize="7dp"
+            android:drawableTop="@drawable/ic_baseline_person_24"
+            android:layout_marginRight="30dp"></Button>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.502">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header_bodyMetrics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_bodyMetrics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="10dp"
+                    android:text="Chỉ số khối cơ thể (BMI)"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"></TextView>
+
+                <ImageButton
+                    android:id="@+id/btn_bodyMetricsSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="none"
+                    android:src="@drawable/ic_baseline_settings_24"></ImageButton>
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="5dp"
+                android:id="@+id/Body_bodyMetrics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="20dp">
+
+                <TextView
+                    android:id="@+id/tv_BMI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="BMI"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_BMIMetrics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="15.0"
+                    android:textColor="@color/red"
+                    android:textSize="30dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_BMI"></TextView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_DateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="50dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_DateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_access_time_24"/>
+                        <TextView
+                            android:id="@+id/tv_BMIDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="17 tháng 9"/>
+
+                        <TextView
+                            android:id="@+id/tv_BMIDash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" - "/>
+
+                        <TextView
+                            android:id="@+id/tv_BMITime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:12"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_DateTime"
+                        android:text="Cập nhật cân nặng"
+                        android:textSize="15dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/yellow_orange"
+                        android:background="none"
+                        android:padding="0dp"></Button>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/rl_DateTime"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+                    <RelativeLayout
+                        android:id="@+id/rl_HeightMetrics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/ll_HeightMetrics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv_HeightMetrics"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="180"
+                                android:textSize="30dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" cm"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_HeightHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chiều cao"
+                            android:layout_below="@+id/ll_HeightMetrics"
+                            android:textSize="20dp"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_WeightMetrics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="50dp">
+                        <LinearLayout
+                            android:id="@+id/ll_WeightMetrics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv_WeightMetrics"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="50"
+                                android:textSize="30dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" kg"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:textColor="@color/black"/>
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_WeightHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thiếu cân"
+                            android:layout_below="@+id/ll_WeightMetrics"
+                            android:textSize="20dp"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/header_waterQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_waterQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="10dp"
+                    android:text="Chỉ số khối cơ thể (BMI)"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"></TextView>
+
+                <ImageButton
+                    android:id="@+id/btn_waterQuantitySetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="none"
+                    android:src="@drawable/ic_baseline_settings_24"></ImageButton>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="20dp"
+                android:padding="5dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:id="@+id/rl_WaterQuantityMetrics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+                        <LinearLayout
+                            android:id="@+id/ll_WaterQuantityMetrics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1950"
+                                android:textSize="30dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" ml"
+                                android:textStyle="bold"
+                                android:textSize="30dp"
+                                android:textColor="@color/red"/>
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_WaterQuantityHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lượng nước bạn cần uống"
+                            android:layout_below="@+id/ll_WaterQuantityMetrics"
+                            android:textSize="17dp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:padding="5dp">
+                        <ImageView
+                            android:id="@+id/ic_timeLastDrinkingRecord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_access_time_24"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="10dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toRightOf="@+id/ic_timeLastDrinkingRecord">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lần cuối cùng"
+                                android:textSize="20dp"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/tv_timeLastDrinkingRecord"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="08:42"
+                                android:textSize="20dp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
+                        android:text="Tắt tính năng thông báo"
+                        android:textColor="#ECBE48"
+                        android:textAllCaps="false"
+                        android:background="none"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp">
+                        <Button
+                            android:id="@+id/btn_waterQuantityPlus"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="+"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="30dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                        <Button
+                            android:id="@+id/btn_waterQuantityMinus"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:text="-"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="30dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/vertical_progressbar"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    style="@style/Widget.ProgressBar.Vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
