@@ -46,7 +46,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="10dp"
-                android:background="none"
                 android:src="@drawable/ic_baseline_settings_24"></ImageButton>
 
             <TextView
@@ -57,49 +56,14 @@
         </RelativeLayout>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/footer"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-        <Button
-            android:id="@+id/btn_diary"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableTop="@drawable/ic_home_black_24dp"
-            android:text="Nhật ký"
-            android:textSize="7dp"
-            android:layout_marginLeft="30dp"></Button>
-
-        <Button
-            android:id="@+id/btn_food"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:text="Món ăn"
-            android:textSize="7dp"
-            android:drawableTop="@drawable/ic_baseline_favorite_24"></Button>\
-
-        <Button
-            android:id="@+id/btn_per"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:text="Cá nhân"
-            android:textSize="7dp"
-            android:drawableTop="@drawable/ic_baseline_person_24"
-            android:layout_marginRight="30dp"></Button>
-    </RelativeLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        app:layout_constraintVertical_bias="0.502">
+        app:layout_constraintTop_toBottomOf="@+id/header">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,17 +93,16 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
-                    android:background="none"
                     android:src="@drawable/ic_baseline_settings_24"></ImageButton>
             </RelativeLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:padding="5dp"
                 android:id="@+id/Body_bodyMetrics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
-                android:layout_marginVertical="20dp">
+                android:layout_marginVertical="20dp"
+                android:padding="5dp">
 
                 <TextView
                     android:id="@+id/tv_BMI"
@@ -168,91 +131,97 @@
                     android:id="@+id/rl_DateTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
                     android:paddingHorizontal="10dp"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="50dp">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <LinearLayout
                         android:id="@+id/ll_DateTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_access_time_24"/>
+                            android:src="@drawable/ic_baseline_access_time_24" />
+
                         <TextView
                             android:id="@+id/tv_BMIDate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="17 tháng 9"/>
+                            android:text="17 tháng 9" />
 
                         <TextView
                             android:id="@+id/tv_BMIDash"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=" - "/>
+                            android:text=" - " />
 
                         <TextView
                             android:id="@+id/tv_BMITime"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="09:12"/>
+                            android:text="09:12" />
                     </LinearLayout>
 
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/ll_DateTime"
+                        android:padding="0dp"
                         android:text="Cập nhật cân nặng"
-                        android:textSize="15dp"
                         android:textAllCaps="false"
                         android:textColor="@color/yellow_orange"
-                        android:background="none"
-                        android:padding="0dp"></Button>
+                        android:textSize="15dp"></Button>
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/rl_DateTime"
-                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal"
-                    android:layout_marginTop="20dp">
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rl_DateTime">
+
                     <RelativeLayout
                         android:id="@+id/rl_HeightMetrics"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
+
                         <LinearLayout
                             android:id="@+id/ll_HeightMetrics"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <TextView
                                 android:id="@+id/tv_HeightMetrics"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="180"
+                                android:textColor="@color/black"
                                 android:textSize="30dp"
-                                android:textStyle="bold"
-                                android:textColor="@color/black"/>
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=" cm"
-                                android:textStyle="bold"
+                                android:textColor="@color/black"
                                 android:textSize="30dp"
-                                android:textColor="@color/black"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
+
                         <TextView
                             android:id="@+id/tv_HeightHeader"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Chiều cao"
                             android:layout_below="@+id/ll_HeightMetrics"
+                            android:text="Chiều cao"
                             android:textSize="20dp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -261,35 +230,39 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="50dp">
+
                         <LinearLayout
                             android:id="@+id/ll_WeightMetrics"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <TextView
                                 android:id="@+id/tv_WeightMetrics"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="50"
+                                android:textColor="@color/black"
                                 android:textSize="30dp"
-                                android:textStyle="bold"
-                                android:textColor="@color/black"/>
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=" kg"
-                                android:textStyle="bold"
+                                android:textColor="@color/black"
                                 android:textSize="30dp"
-                                android:textColor="@color/black"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
+
                         <TextView
                             android:id="@+id/tv_WeightHeader"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Thiếu cân"
                             android:layout_below="@+id/ll_WeightMetrics"
+                            android:text="Thiếu cân"
                             android:textSize="20dp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
                     </RelativeLayout>
                 </RelativeLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -298,6 +271,7 @@
                 android:id="@+id/header_waterQuantity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:id="@+id/tv_waterQuantity"
                     android:layout_width="wrap_content"
@@ -316,7 +290,6 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
-                    android:background="none"
                     android:src="@drawable/ic_baseline_settings_24"></ImageButton>
             </RelativeLayout>
 
@@ -326,42 +299,48 @@
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginVertical="20dp"
                 android:padding="5dp">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <RelativeLayout
                         android:id="@+id/rl_WaterQuantityMetrics"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="5dp">
+
                         <LinearLayout
                             android:id="@+id/ll_WaterQuantityMetrics"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="1950"
+                                android:textColor="@color/red"
                                 android:textSize="30dp"
-                                android:textStyle="bold"
-                                android:textColor="@color/red"/>
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text=" ml"
-                                android:textStyle="bold"
+                                android:textColor="@color/red"
                                 android:textSize="30dp"
-                                android:textColor="@color/red"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
+
                         <TextView
                             android:id="@+id/tv_WaterQuantityHeader"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Lượng nước bạn cần uống"
                             android:layout_below="@+id/ll_WaterQuantityMetrics"
-                            android:textSize="17dp"/>
+                            android:text="Lượng nước bạn cần uống"
+                            android:textSize="17dp" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -369,81 +348,88 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:padding="5dp">
+
                         <ImageView
                             android:id="@+id/ic_timeLastDrinkingRecord"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_baseline_access_time_24"
                             android:layout_centerVertical="true"
-                            android:layout_marginHorizontal="10dp"/>
+                            android:layout_marginHorizontal="10dp"
+                            android:src="@drawable/ic_baseline_access_time_24" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_toRightOf="@+id/ic_timeLastDrinkingRecord">
+                            android:layout_toRightOf="@+id/ic_timeLastDrinkingRecord"
+                            android:orientation="vertical">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Lần cuối cùng"
                                 android:textSize="20dp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold" />
+
                             <TextView
                                 android:id="@+id/tv_timeLastDrinkingRecord"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="08:42"
                                 android:textSize="20dp"
-                                android:textStyle="bold"/>
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </RelativeLayout>
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
                         android:text="Tắt tính năng thông báo"
-                        android:textColor="#ECBE48"
                         android:textAllCaps="false"
-                        android:background="none"/>
+                        android:textColor="#ECBE48" />
                 </LinearLayout>
+
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="15dp">
+
                         <Button
                             android:id="@+id/btn_waterQuantityPlus"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:layout_marginTop="30dp"
                             android:text="+"
                             android:textSize="20dp"
                             android:textStyle="bold"
-                            android:layout_marginTop="30dp"
                             app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <Button
                             android:id="@+id/btn_waterQuantityMinus"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:layout_marginBottom="30dp"
                             android:text="-"
                             android:textSize="20dp"
                             android:textStyle="bold"
-                            android:layout_marginBottom="30dp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"/>
+                            app:layout_constraintLeft_toLeftOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </RelativeLayout>
 
                 <ProgressBar
                     android:id="@+id/vertical_progressbar"
+                    style="@style/Widget.ProgressBar.Vertical"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
-                    style="@style/Widget.ProgressBar.Vertical"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
-                    />
+                    android:progressTint="#4CAF50" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
