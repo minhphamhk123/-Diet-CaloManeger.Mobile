@@ -25,18 +25,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_diary, R.id.navigation_dashboard, R.id.navigation_notifications)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(binding.navView, navController);
         final FloatingActionButton BF_button = (FloatingActionButton) findViewById(R.id.Breakfast);
         BF_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                BF_button.setVisibility(View.GONE);
+                navController.navigate(R.id.navigation_eat_schedule);
             }
         });
         final FloatingActionButton Lunch_button = (FloatingActionButton) findViewById(R.id.Lunch);
         Lunch_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                Lunch_button.setVisibility(View.GONE);
+                navController.navigate(R.id.navigation_exercise_schedule);
             }
         });
         final FloatingActionButton Dinner_button = (FloatingActionButton) findViewById(R.id.Dinner);
@@ -46,14 +54,6 @@ public class MainActivity extends AppCompatActivity {
                 Dinner_button.setVisibility(View.GONE);
             }
         });
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_diary, R.id.navigation_dashboard, R.id.navigation_notifications)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
 }

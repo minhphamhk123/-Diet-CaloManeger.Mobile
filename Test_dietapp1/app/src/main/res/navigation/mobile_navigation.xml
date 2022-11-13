@@ -22,4 +22,14 @@
         android:name="com.example.test_dietapp1.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_eat_schedule"
+        android:name="com.example.test_dietapp1.ui.addinfab.Eat_schedule_Fragment"
+        android:label="@string/title_eat_calender"
+        tools:layout="@layout/fragment_eat_schedule_" />
+    <fragment
+        android:id="@+id/navigation_exercise_schedule"
+        android:name="com.example.test_dietapp1.ui.addinfab.fragment_exercise_schedule"
+        android:label="@string/title_exercise_calender"
+        tools:layout="@layout/fragment_exercise_schedule" />
 </navigation>
