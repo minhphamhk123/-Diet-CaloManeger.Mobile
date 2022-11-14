@@ -21,7 +21,11 @@
         android:id="@+id/navigation_notifications"
         android:name="com.example.test_dietapp1.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_eat_schedule"
         android:name="com.example.test_dietapp1.ui.addinfab.Eat_schedule_Fragment"
@@ -32,4 +36,52 @@
         android:name="com.example.test_dietapp1.ui.addinfab.fragment_exercise_schedule"
         android:label="@string/title_exercise_calender"
         tools:layout="@layout/fragment_exercise_schedule" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.test_dietapp1.ui.notifications.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+        <action
+            android:id="@+id/action_settingFragment_to_BMRFragment"
+            app:destination="@id/BMRFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_watterFragment"
+            app:destination="@id/watterFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_macroFragment"
+            app:destination="@id/macroFragment" />
+        <action
+            android:id="@+id/action_settingFragment_self"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BMRFragment"
+        android:name="com.example.test_dietapp1.ui.notifications.BMRFragment"
+        android:label="fragment_b_m_r"
+        tools:layout="@layout/fragment_b_m_r" >
+        <action
+            android:id="@+id/action_BMRFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/watterFragment"
+        android:name="com.example.test_dietapp1.ui.notifications.WatterFragment"
+        android:label="fragment_watter"
+        tools:layout="@layout/fragment_watter" >
+        <action
+            android:id="@+id/action_watterFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/macroFragment"
+        android:name="com.example.test_dietapp1.ui.notifications.MacroFragment"
+        android:label="fragment_macro"
+        tools:layout="@layout/fragment_macro" >
+        <action
+            android:id="@+id/action_macroFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
 </navigation>
