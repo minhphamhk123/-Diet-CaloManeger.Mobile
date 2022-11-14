@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.notifications.WatterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txView1"
+            android:layout_width="267dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:text="Lượng nước bạn cần uống (ml)"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="95dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txView2"
+            android:layout_width="267dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:text="Kích thước (ml)"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="77dp" />
+        <EditText
+            android:id="@+id/editTextNumber2"
+            android:layout_width="95dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="77dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txView4"
+            android:layout_width="262dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="16dp"
+            android:text="Thời gian ngủ"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="195dp" />
+        <EditText
+            android:id="@+id/editTextNumber4"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+        <EditText
+            android:id="@+id/editTextNumber5"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="136dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txView5"
+            android:layout_width="267dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:text="Khoảng thời gian nhắc nhở (phút)"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <EditText
+            android:id="@+id/editTextNumber6"
+            android:layout_width="95dp"
+            android:layout_height="42dp"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="17dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="Tạo mới lịch uống nước"></Button>
+
+</LinearLayout>
+
+
