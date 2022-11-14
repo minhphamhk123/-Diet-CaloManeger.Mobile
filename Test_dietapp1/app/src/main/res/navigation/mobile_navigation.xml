@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/navigation_eat_schedule"
-        android:name="com.example.test_dietapp1.ui.addinfab.Eat_schedule_Fragment"
+        android:name="com.example.test_dietapp1.ui.addinfab.fragment_eat_schedule"
         android:label="@string/title_eat_calender"
         tools:layout="@layout/fragment_eat_schedule_" />
     <fragment
