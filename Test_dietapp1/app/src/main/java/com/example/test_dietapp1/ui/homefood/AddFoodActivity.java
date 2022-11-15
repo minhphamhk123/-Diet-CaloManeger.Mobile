@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.test_dietapp1.R;
 
-public class activity_add_food extends AppCompatActivity {
+public class AddFoodActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

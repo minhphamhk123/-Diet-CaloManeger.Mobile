@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="ui.homefood.fragment_home_add_food">
+    tools:context=".ui.homefood.HomeAddFoodFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -84,25 +85,11 @@
             android:layout_below="@+id/home_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabSelectedTextColor="#4CAF50"  >
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabMonan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Món ăn" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabThucpham"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Thực phẩm" />
-
-        </com.google.android.material.tabs.TabLayout>
+            app:tabSelectedTextColor="#4CAF50"  />
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
             android:layout_below="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"    />
     </RelativeLayout>
-</FrameLayout>
+</LinearLayout>
