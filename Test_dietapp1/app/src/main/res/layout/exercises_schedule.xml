@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".ui.addinfab.fragment_exercise_schedule">
 
+    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:id="@+id/rl_menuFood"
         android:layout_width="match_parent"
@@ -13,7 +16,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0">
+        app:layout_constraintVertical_bias="0"
+        android:background="#4CAF50">
 
         <ImageButton
             android:id="@+id/btn_Close"
@@ -21,10 +25,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
-            android:background="none"
             android:padding="10dp"
             android:src="@drawable/ic_baseline_close_24"
-            android:textColor="@color/black"></ImageButton>
+            android:background="#4CAF50"></ImageButton>
 
         <TextView
             android:id="@+id/tv_Header_eatingSchedule"
@@ -35,214 +38,312 @@
             android:layout_marginBottom="20dp"
             android:text="Lịch tập"
             android:textAlignment="center"
-            android:textSize="30dp"></TextView>
+            android:textSize="30dp"
+            android:textColor="@color/white"></TextView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_searchingFood"
+        <RelativeLayout
+            android:id="@+id/rl_searchingFood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_Header_eatingSchedule">
-
-            <EditText
-                android:id="@+id/et_Finding_Food"
+            android:layout_below="@+id/tv_Header_eatingSchedule"
+            android:layout_marginHorizontal="10dp">
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:drawableLeft="@drawable/ic_baseline_search_24"
-                android:hint="Tìm kiếm..."
-                app:layout_constraintHorizontal_bias="0."
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></EditText>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_margin="5dp"
+                app:cardCornerRadius="20dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_Header_eatingSchedule">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+                    <EditText
+                        android:id="@+id/et_Finding_Food"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:drawableLeft="@drawable/ic_baseline_search_24"
+                        android:hint="Tìm kiếm..."
+                        android:minWidth="300dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0."
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="none"
+                        android:padding="10dp"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_searchingFood">
+
+            <Button
+                android:id="@+id/btn_createNewFood"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cl_searchingFood">
-                <Button
-                    android:id="@+id/btn_createNewFood"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_mobile_screen_share_24"
-                    android:text="Tự động đồng bộ hóa"
-                    android:textAllCaps="false"
-                    android:layout_marginHorizontal="5dp"/>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_baseline_local_fire_department_24"
-                    android:text="Thêm calo"
-                    android:textAllCaps="false"
-                    android:layout_marginHorizontal="5dp"/>
-            </LinearLayout>
+                android:layout_marginHorizontal="5dp"
+                android:drawableLeft="@drawable/ic_baseline_mobile_screen_share_24"
+                android:text="Tự động đồng bộ hóa"
+                android:textAllCaps="false"
+                android:background=""/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:drawableLeft="@drawable/ic_baseline_local_fire_department_24"
+                android:text="Thêm calo"
+                android:textAllCaps="false"
+                android:background=""/>
+        </LinearLayout>
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rl_menuFood"
-        app:layout_constraintLeft_toLeftOf="parent">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_menuFood">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="15dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Chống đẩy"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="297 kcal - 30 phút calo "
-                        android:textColor="#5A5A5A"></TextView>
-                </LinearLayout>
+                android:theme="@style/Platform.MaterialComponents.Light">
 
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:text="+"
-                    android:textSize="20dp"/>
-            </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="15dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="15dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="15dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Jumping jack"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="340 kcal - 30 phút calo "
-                        android:textColor="#5A5A5A"></TextView>
-                </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
 
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:text="+"
-                    android:textSize="20dp"/>
-            </RelativeLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Chống đẩy"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp"></TextView>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="15dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yoga"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="138 kcal - 30 phút calo "
-                        android:textColor="#5A5A5A"></TextView>
-                </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="297 kcal - 30 phút calo "
+                                    android:textColor="#5A5A5A"></TextView>
+                            </LinearLayout>
 
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:text="+"
-                    android:textSize="20dp"/>
-            </RelativeLayout>
+                                <com.google.android.material.chip.Chip
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginRight="10dp"
+                                    android:text="+"
+                                    android:textSize="20dp"
+                                    android:layout_alignParentRight="true"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="15dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="15dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="15dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Leo cầu thang"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="260 kcal - 30 phút calo "
-                        android:textColor="#5A5A5A"></TextView>
-                </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
 
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:text="+"
-                    android:textSize="20dp"/>
-            </RelativeLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jumping jack"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp"></TextView>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="15dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Chạy bộ"
-                        android:textSize="20dp"
-                        android:textColor="@color/black"></TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="297 kcal - 30 phút calo "
-                        android:textColor="#5A5A5A"></TextView>
-                </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="340 kcal - 30 phút calo "
+                                    android:textColor="#5A5A5A"></TextView>
+                            </LinearLayout>
 
-                <Button
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:text="+"
-                    android:textSize="20dp"/>
-            </RelativeLayout>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="10dp"
+                                android:text="+"
+                                android:textSize="20dp"
+                                android:layout_alignParentRight="true"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="15dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="15dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yoga"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp"></TextView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="138 kcal - 30 phút calo "
+                                    android:textColor="#5A5A5A"></TextView>
+                            </LinearLayout>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="10dp"
+                                android:text="+"
+                                android:textSize="20dp"
+                                android:layout_alignParentRight="true"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="15dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="15dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Leo cầu thang"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp"></TextView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="260 kcal - 30 phút calo "
+                                    android:textColor="#5A5A5A"></TextView>
+                            </LinearLayout>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="10dp"
+                                android:text="+"
+                                android:textSize="20dp"
+                                android:layout_alignParentRight="true"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="15dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="15dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Chạy bộ"
+                                    android:textColor="@color/black"
+                                    android:textSize="20dp"></TextView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="297 kcal - 30 phút calo "
+                                    android:textColor="#5A5A5A"></TextView>
+                            </LinearLayout>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="10dp"
+                                android:text="+"
+                                android:textSize="20dp"
+                                android:layout_alignParentRight="true"/>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </com.google.android.material.chip.ChipGroup>
         </LinearLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
