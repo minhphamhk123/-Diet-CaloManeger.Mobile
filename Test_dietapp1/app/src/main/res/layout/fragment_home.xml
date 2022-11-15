@@ -369,7 +369,7 @@
                     android:layout_height="61dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
@@ -536,7 +536,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="10dp"
-                    app:cardCornerRadius="5dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -573,14 +573,19 @@
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:background="#9C0B0B"
-                android:visibility="gone"
                 tools:visibility="gone">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip4"
+                    android:layout_width="242dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#FFFFFF" />
+
+            </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"

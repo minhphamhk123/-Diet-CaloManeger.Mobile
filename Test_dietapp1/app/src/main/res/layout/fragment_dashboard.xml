@@ -1,23 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="2"
-        android:textAlignment="textStart"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/home_header"
+            android:layout_width="match_parent"
+            android:layout_height="120sp"
+            android:background="#4CAF50"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_view_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text="Món ăn của riêng bạn"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/feature_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <SearchView
+                    android:id="@+id/search_view_food"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginBottom="8sp"
+                    android:background="@drawable/ic_border_searchview"
+                    android:foregroundTint="#FFFFFF"
+                    android:iconifiedByDefault="false"
+                    android:queryBackground="@android:color/transparent"
+                    android:queryHint="Tìm kiếm..."
+                    android:searchIcon="@null"
+                    android:submitBackground="@drawable/ic_border_searchview" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="@drawable/ic_baseline_search_24"
+                    android:foregroundGravity="center"
+                    android:foregroundTint="#000000"
+                    android:tint="#009688"
+                    app:backgroundTint="#FFFFFF"
+                    app:borderWidth="0dp"
+                    app:elevation="6dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="@drawable/ic_baseline_add_24"
+                    android:foregroundGravity="center"
+                    android:foregroundTint="#000000"
+                    android:tint="#009688"
+                    app:backgroundTint="#FFFFFF"
+                    app:borderWidth="0dp"
+                    app:elevation="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_header"
+            app:tabSelectedTextColor="#4CAF50"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab_layout" />
+    </RelativeLayout>
+</FrameLayout>

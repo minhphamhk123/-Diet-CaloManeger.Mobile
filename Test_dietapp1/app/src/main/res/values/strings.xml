@@ -3,6 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_eat_calender">Eat calender</string>
+    <string name="title_exercise_calender">Eat calender</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -92,4 +94,46 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="muctieu">Mục Tiêu</string>
+    <string name="gioitinh">Giới tính</string>
+    <string name="check1">Loại trừ calo luyện tập (tiêu hao)</string>
+    <string-array name="result">
+        <item>Giảm cân</item>
+        <item>Giữ nguyên cân nặng</item>
+        <item>Tăng cân</item>
+    </string-array>
+    <string-array name="resultValue">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Nam</item>
+        <item>Nữ</item>
+    </string-array>
+    <string-array name="resultGender">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
 </resources>
