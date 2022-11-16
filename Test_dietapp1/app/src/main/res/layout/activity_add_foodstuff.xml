@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.homefood.AddFoodStuffActivity">
+    android:background="#EBEBEB"
+    tools:context=".ui.homefood.activity_add_foodstuff">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -96,20 +97,20 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/meal"
-                app:layout_constraintTop_toBottomOf="@+id/title2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 app:cardCornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title2"
                 tools:ignore="MissingConstraints">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginVertical="20dp">
+                    android:layout_marginVertical="20dp"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/view1"
@@ -121,19 +122,19 @@
                             android:id="@+id/textView1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginRight="10dp"
                             android:padding="10dp"
                             android:text="Chọn khẩu phần ăn"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:layout_marginRight="10dp"/>
+                            app:layout_constraintStart_toStartOf="parent" />
 
                         <Spinner
                             android:id="@+id/name_foodstuff1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/layout_corner_shape"
-                            android:minWidth="200dp"/>
+                            android:minWidth="200dp" />
 
                     </LinearLayout>
 
@@ -146,24 +147,23 @@
                         app:layout_constraintTop_toBottomOf="@+id/view1">
 
 
-
                         <TextView
                             android:id="@+id/textView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
                             android:padding="10dp"
                             android:text="Tên của khẩu phần ăn"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:layout_marginRight="10dp"/>
+                            android:textSize="18sp" />
 
                         <EditText
                             android:id="@+id/name_foodstuff2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="vd: hộp, lon ...(bắt buộc)"
                             android:ellipsize="end"
-                            android:maxLines="1"    />
+                            android:hint="vd: hộp, lon ...(bắt buộc)"
+                            android:maxLines="1" />
 
                     </LinearLayout>
 
@@ -180,25 +180,25 @@
                             android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
                             android:padding="10dp"
                             android:text="1 Khẩu phần ăn ="
                             android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:layout_marginRight="10dp" />
+                            android:textSize="18sp" />
 
                         <EditText
                             android:layout_width="80dp"
                             android:layout_height="match_parent"
-                            android:background="@drawable/bg_corner_edittext"
                             android:layout_marginRight="10dp"
+                            android:background="@drawable/bg_corner_edittext"
                             android:gravity="center"
-                            android:hint="100"/>
+                            android:hint="100" />
 
                         <Spinner
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/layout_corner_shape"
-                            android:minWidth="120dp"/>
+                            android:minWidth="120dp" />
 
                     </LinearLayout>
 
@@ -212,12 +212,12 @@
             android:id="@+id/btn_submit"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
+            android:paddingVertical="15dp"
             android:text="Tiếp tục"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="20dp"
-            android:paddingVertical="15dp"
-            android:backgroundTint="#4CAF50"
             app:cornerRadius="30dp"
             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
             app:layout_constraintEnd_toEndOf="parent"

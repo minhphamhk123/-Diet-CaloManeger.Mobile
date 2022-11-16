@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.Fragmentadd">
+    android:background="#EBEBEB"
+    tools:context=".ui.homefood.activity_add_food">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -75,13 +76,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="*bắt buộc"
                             android:inputType="textMultiLine"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="1.0"
                             app:layout_constraintStart_toEndOf="@+id/label1"
-                            tools:layout_editor_absoluteY="0dp"
-                            android:hint="*bắt buộc"
-                            />
+                            tools:layout_editor_absoluteY="0dp" />
 
                         <ImageButton
                             android:id="@+id/imageButton"
@@ -127,15 +127,14 @@
                     style="@style/Widget.MaterialComponents.Button.Icon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="20dp"
                     android:backgroundTint="@color/white"
                     android:gravity="center"
                     android:text="Thêm thực phẩm"
-                    android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="#6EB8BB"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.498"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/list_view_food" />
 
@@ -147,13 +146,13 @@
             android:id="@+id/btn_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="15dp"
             android:text="Tạo món ăn mới"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="20dp"
-            android:paddingVertical="15dp"
-            android:backgroundTint="#4CAF50"
-            android:paddingHorizontal="30dp"
             app:cornerRadius="30dp"
             app:layout_constraintBottom_toBottomOf="@+id/scroll_view_inf"
             app:layout_constraintEnd_toEndOf="parent"

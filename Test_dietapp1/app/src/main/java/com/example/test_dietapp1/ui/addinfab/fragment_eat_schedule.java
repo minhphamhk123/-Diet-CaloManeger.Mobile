@@ -12,8 +12,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
+import com.example.test_dietapp1.R;
 import com.example.test_dietapp1.databinding.FragmentEatScheduleBinding;
+import com.getbase.floatingactionbutton.FloatingActionButton;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -24,6 +28,7 @@ public class fragment_eat_schedule extends Fragment {
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
      */
+    private ImageButton btnClick;
     private static final boolean AUTO_HIDE = true;
 
     /**
@@ -50,16 +55,22 @@ public class fragment_eat_schedule extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-
+        View rootView = inflater.inflate(R.layout.fragment_eat_schedule_, container,false);
+        btnClick = (ImageButton) rootView.findViewById(R.id.btn_Close);
+        btnClick.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // your handler code here
+                getActivity().getFragmentManager().popBackStack();
+            }
+        });
         binding = FragmentEatScheduleBinding.inflate(inflater, container, false);
-        return binding.getRoot();
-
+        //return binding.getRoot();
+        return rootView;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         // Set up the user interaction to manually show or hide the system UI.
 
         // Upon interacting with UI controls, delay any scheduled hide()
