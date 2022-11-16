@@ -10,6 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"></FrameLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
@@ -82,19 +83,20 @@
 
         <SeekBar
             android:id="@+id/seekBar2"
-            android:layout_width="282dp"
+            android:layout_width="0dp"
             android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.558"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.636" />
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="44dp"
             android:layout_height="39dp"
+            android:layout_marginStart="5dp"
             android:text="-"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -107,6 +109,7 @@
             android:id="@+id/button3"
             android:layout_width="44dp"
             android:layout_height="39dp"
+            android:layout_marginEnd="5dp"
             android:text="+"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -189,19 +192,20 @@
 
         <SeekBar
             android:id="@+id/seekBar3"
-            android:layout_width="282dp"
+            android:layout_width="0dp"
             android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.636" />
+            app:layout_constraintEnd_toStartOf="@+id/button5"
+            app:layout_constraintStart_toEndOf="@+id/button4"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="44dp"
             android:layout_height="39dp"
+            android:layout_marginStart="5dp"
             android:text="-"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -214,6 +218,7 @@
             android:id="@+id/button5"
             android:layout_width="44dp"
             android:layout_height="39dp"
+            android:layout_marginEnd="5dp"
             android:text="+"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -263,7 +268,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="35%"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/seekBar4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.532"
             app:layout_constraintStart_toStartOf="parent"
@@ -296,19 +301,20 @@
 
         <SeekBar
             android:id="@+id/seekBar4"
-            android:layout_width="282dp"
-            android:layout_height="24dp"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.636" />
+            app:layout_constraintEnd_toStartOf="@+id/button6"
+            app:layout_constraintStart_toEndOf="@+id/button8"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button8"
             android:layout_width="44dp"
             android:layout_height="39dp"
+            android:layout_marginStart="5dp"
             android:text="-"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -321,6 +327,7 @@
             android:id="@+id/button6"
             android:layout_width="44dp"
             android:layout_height="39dp"
+            android:layout_marginEnd="5dp"
             android:text="+"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
