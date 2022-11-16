@@ -27,7 +27,8 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <LinearLayout
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/feature_bar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -36,11 +37,10 @@
 
                 <SearchView
                     android:id="@+id/search_view_food"
-                    android:layout_width="250sp"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
-                    android:layout_marginTop="8sp"
-                    android:layout_marginBottom="8sp"
+                    android:autoSizeTextType="uniform"
                     android:background="@drawable/ic_border_searchview"
                     android:foregroundTint="#FFFFFF"
                     android:iconifiedByDefault="false"
@@ -53,10 +53,10 @@
                     android:id="@+id/btn_search"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15sp"
+                    android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:clickable="true"
-                    android:foreground="@drawable/ic_baseline_search_24"
+                    android:foreground="@android:drawable/ic_menu_search"
                     android:foregroundGravity="center"
                     android:foregroundTint="#000000"
                     android:tint="#009688"
@@ -68,7 +68,7 @@
                     android:id="@+id/btn_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10sp"
+                    android:layout_marginHorizontal="10dp"
                     android:layout_weight="1"
                     android:clickable="true"
                     android:foreground="@drawable/ic_baseline_add_24"
@@ -86,7 +86,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/home_header"
-            app:tabSelectedTextColor="#4CAF50"/>
+            app:tabSelectedTextColor="#4CAF50" />
+
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
