@@ -32,7 +32,8 @@
             android:padding="10dp"
             android:src="@drawable/ic_baseline_close_24"
             android:textColor="@color/white"
-            android:background="#4CAF50"></ImageButton>
+            android:background="#4CAF50"
+            app:tint="@color/white"></ImageButton>
 
         <TextView
             android:id="@+id/tv_Header_eatingSchedule"
@@ -59,15 +60,15 @@
                 app:cardCornerRadius="20dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_Header_eatingSchedule">
-
+                    android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/et_Finding_Food"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:drawableLeft="@drawable/ic_baseline_search_24"
+                        android:drawableTint="@color/black"
+                        android:="@color/black"
                         android:hint="Tìm kiếm..."
                         android:minWidth="300dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -111,7 +112,7 @@
                     android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
                     android:text="Mới nhất"
                     android:textAllCaps="false"
-                    android:background=""/>
+                    android:background="none"/>
 
                 <Button
                     android:id="@+id/btn_createNewFood"
@@ -128,6 +129,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
                     android:drawableLeft="@drawable/ic_baseline_local_fire_department_24"
+                    android:drawableTint="@color/white"
                     android:text="Thêm calo"
                     android:textAllCaps="false"
                     android:background=""/>
