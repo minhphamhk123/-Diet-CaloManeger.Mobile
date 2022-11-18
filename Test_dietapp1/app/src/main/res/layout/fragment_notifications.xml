@@ -14,7 +14,6 @@
         android:background="#4CAF50"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <RelativeLayout
             android:id="@+id/header_1"
             android:layout_width="wrap_content"
@@ -22,14 +21,14 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            >
 
             <ImageButton
                 android:id="@+id/per_image"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/personal_picture" />
-
             <TextView
                 android:id="@+id/per_name"
                 android:layout_width="wrap_content"
@@ -52,8 +51,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_baseline_settings_24"
                 android:background="#4CAF50"
-                android:src="@drawable/ic_baseline_settings_24"></ImageButton>
+                app:tint="@color/white"></ImageButton>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -101,7 +101,6 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
-                    android:backgroundTint="#EBEBEB"
                     android:paddingHorizontal="20dp"
                     android:paddingVertical="10dp"
                     android:src="@drawable/ic_baseline_more_horiz_24"></ImageButton>
@@ -110,7 +109,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -119,7 +117,6 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
                     app:cardCornerRadius="20dp">
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Body_bodyMetrics"
                         android:layout_width="match_parent"
@@ -194,12 +191,13 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ll_DateTime"
-                                android:layout_marginLeft="5dp"
                                 android:padding="0dp"
                                 android:text="Cập nhật cân nặng"
                                 android:textAllCaps="false"
                                 android:textColor="@color/yellow_orange"
-                                android:textSize="13dp"></Button>
+                                android:textSize="13dp"
+                                android:background="none"
+                                android:layout_marginLeft="5dp"></Button>
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -293,8 +291,6 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
-
-
             <RelativeLayout
                 android:id="@+id/header_waterQuantity"
                 android:layout_width="match_parent"
@@ -318,31 +314,24 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
-                    android:backgroundTint="#EBEBEB"
-                    android:paddingHorizontal="20dp"
+                    android:src="@drawable/ic_baseline_more_horiz_24"
+                    android:background="none"
                     android:paddingVertical="10dp"
-                    android:src="@drawable/ic_baseline_more_horiz_24"></ImageButton>
+                    android:paddingHorizontal="20dp"></ImageButton>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="9dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_margin="10dp"
                     app:cardCornerRadius="20dp">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginHorizontal="15dp"
                         android:layout_marginVertical="20dp"
                         android:padding="5dp">
 
@@ -350,7 +339,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-
                             <RelativeLayout
                                 android:id="@+id/rl_WaterQuantityMetrics"
                                 android:layout_width="wrap_content"
@@ -432,66 +420,50 @@
                                 android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
                                 android:text="Tắt tính năng thông báo"
                                 android:textAllCaps="false"
-                                android:textColor="#ECBE48" />
+                                android:textColor="#ECBE48"
+                                android:background="none"/>
                         </LinearLayout>
 
                         <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="15dp">
-
-                            <com.google.android.material.chip.ChipGroup
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:theme="@style/Platform.MaterialComponents.Light">
-
                                 <RelativeLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent">
+                                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                            android:id="@+id/btn_waterQuantityPlus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="30dp"
+                                            android:foreground="@drawable/ic_launcher_remove_foreground"
+                                            android:layout_alignParentTop="true"
+                                            android:foregroundTint="#5FDDF4"
+                                            android:backgroundTint="@color/white"/>
 
-                                    <com.google.android.material.chip.Chip
-                                        android:id="@+id/btn_waterQuantityPlus"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_marginTop="30dp"
-                                        android:text="+"
-                                        android:textSize="20dp"
-                                        android:textStyle="bold" />
-
-                                    <com.google.android.material.chip.Chip
-                                        android:id="@+id/btn_waterQuantityMinus"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_alignParentBottom="true"
-                                        android:layout_marginBottom="30dp"
-                                        android:text="-"
-                                        android:textSize="20dp"
-                                        android:textStyle="bold" />
-
+                                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                            android:id="@+id/btn_waterQuantityMinus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="30dp"
+                                            android:src="@drawable/ic_baseline_remove_24"
+                                            android:foregroundTint="#5FDDF4"
+                                            android:backgroundTint="@color/white"
+                                            android:layout_alignParentBottom="true"/>
                                 </RelativeLayout>
-                            </com.google.android.material.chip.ChipGroup>
                         </RelativeLayout>
 
                         <ProgressBar
                             android:id="@+id/vertical_progressbar"
                             style="@style/Widget.ProgressBar.Vertical"
-                            android:layout_width="40dp"
+                            android:layout_width="50dp"
                             android:layout_height="match_parent"
-                            android:layout_marginHorizontal="20dp"
-                            android:layout_marginVertical="3dp"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginLeft="20dp"
                             android:layout_marginTop="20dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginRight="10dp"
-                            android:progressTint="#4CAF50" />
+                            android:progressTint="#5FDDF4" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="56dp" />
         </LinearLayout>
     </ScrollView>
 
