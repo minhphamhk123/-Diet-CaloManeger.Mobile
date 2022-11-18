@@ -22,7 +22,6 @@ public class fragment_card_food_notion extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         viewCard = inflater.inflate(R.layout.fragment_card_food_notion, container, false);
-
         return viewCard;
     }
 }

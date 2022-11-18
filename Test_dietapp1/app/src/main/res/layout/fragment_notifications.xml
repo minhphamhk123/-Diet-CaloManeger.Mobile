@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EBEBEB"
     tools:context=".ui.notifications.NotificationsFragment">
 
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="#4CAF50"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:background="#4CAF50">
-
+        app:layout_constraintTop_toTopOf="parent">
         <RelativeLayout
             android:id="@+id/header_1"
             android:layout_width="wrap_content"
@@ -28,15 +28,14 @@
                 android:id="@+id/per_image"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@drawable/personal_picture"/>
-
+                android:background="@drawable/personal_picture" />
             <TextView
                 android:id="@+id/per_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/per_image"
                 android:text="Minh Nhật Phạm"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -102,10 +101,9 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_baseline_more_horiz_24"
-                    android:background="none"
+                    android:paddingHorizontal="20dp"
                     android:paddingVertical="10dp"
-                    android:paddingHorizontal="20dp"></ImageButton>
+                    android:src="@drawable/ic_baseline_more_horiz_24"></ImageButton>
             </RelativeLayout>
 
             <RelativeLayout
@@ -293,7 +291,6 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
-
             <RelativeLayout
                 android:id="@+id/header_waterQuantity"
                 android:layout_width="match_parent"
@@ -342,7 +339,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-
                             <RelativeLayout
                                 android:id="@+id/rl_WaterQuantityMetrics"
                                 android:layout_width="wrap_content"
@@ -468,6 +464,10 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
