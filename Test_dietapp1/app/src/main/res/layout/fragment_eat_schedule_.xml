@@ -108,11 +108,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
+                    android:backgroundTint="#4CAF50"
                     android:drawableLeft="@drawable/ic_baseline_sort_24"
                     android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
                     android:text="Mới nhất"
-                    android:textAllCaps="false"
-                    android:background="none"/>
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/btn_createNewFood"
@@ -490,9 +490,6 @@
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
                 </RelativeLayout>
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="56dp" />
             </com.google.android.material.chip.ChipGroup>
         </LinearLayout>
     </ScrollView>

@@ -464,9 +464,6 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="56dp" />
         </LinearLayout>
     </ScrollView>
 
