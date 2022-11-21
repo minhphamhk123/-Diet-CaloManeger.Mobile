@@ -1,4 +1,4 @@
-package com.example.test_dietapp1.ui.homefood;
+package com.example.test_dietapp1.ui.dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
