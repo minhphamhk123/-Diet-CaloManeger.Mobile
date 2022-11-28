@@ -1,17 +1,17 @@
 package com.example.test_dietapp1.ui.dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.test_dietapp1.MainActivity;
 import com.example.test_dietapp1.R;
 import com.example.test_dietapp1.databinding.FragmentDashboardBinding;
 import com.google.android.material.tabs.TabLayout;
@@ -19,12 +19,11 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 public class DashboardFragment extends Fragment {
+
+    private int indexTabLayout = 0;
 
     private List<CardInfo> mListCardInfo;
 
@@ -44,8 +43,51 @@ public class DashboardFragment extends Fragment {
         super.onCreate(savedInstanceState);
         homeView = inflater.inflate(R.layout.fragment_dashboard, container, false);
         initUI(homeView);
-
         mListCardInfo = getListCardInfo();
+
+        //Thêm sự kiện click button
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (indexTabLayout) {
+                    case 0: {
+                        startActivity(new Intent(getActivity(), AddFoodActivity.class));
+                        break;
+                    }
+                    case 1: {
+                        startActivity(new Intent(getActivity(), AddFoodStuffActivity.class));
+                        break;
+                    }
+                    default: startActivity(new Intent(getActivity(), AddFoodActivity.class));
+                }
+            }
+        });
+
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
+        //Lấy chỉ sốị của tablayout được chọn
+        optionTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                indexTabLayout = tab.getPosition();
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         //Adapter Tablayout
         Testadapter adapter = new Testadapter(getParentFragmentManager(), getLifecycle(), mListCardInfo);
@@ -83,9 +125,9 @@ public class DashboardFragment extends Fragment {
         return list;
     }
 
-//    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        binding = null;
-//    }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }
