@@ -196,7 +196,6 @@
                                 android:textAllCaps="false"
                                 android:textColor="@color/yellow_orange"
                                 android:textSize="13dp"
-                                android:background="none"
                                 android:layout_marginLeft="5dp"></Button>
                         </RelativeLayout>
 
@@ -315,7 +314,6 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/ic_baseline_more_horiz_24"
-                    android:background="none"
                     android:paddingVertical="10dp"
                     android:paddingHorizontal="20dp"></ImageButton>
             </RelativeLayout>
@@ -420,8 +418,7 @@
                                 android:drawableLeft="@drawable/ic_baseline_notifications_active_24"
                                 android:text="Tắt tính năng thông báo"
                                 android:textAllCaps="false"
-                                android:textColor="#ECBE48"
-                                android:background="none"/>
+                                android:textColor="#ECBE48" />
                         </LinearLayout>
 
                         <RelativeLayout

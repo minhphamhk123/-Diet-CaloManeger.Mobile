@@ -385,9 +385,9 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:backgroundTint="#FFFFFF"
-                            android:foreground="@drawable/empty_glass"
-                            android:foregroundGravity="fill_horizontal|fill_vertical|center_horizontal"
-                            android:foregroundTint="#000000" />
+                            android:foreground="@drawable/ic_baseline_water_drop_24"
+                            android:foregroundGravity="center"
+                            android:foregroundTint="@color/light_blue_600" />
 
                         <ImageButton
                             android:id="@+id/imageButton8"
@@ -395,8 +395,8 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:backgroundTint="#FFFFFF"
-                            android:foreground="@drawable/empty_glass"
-                            android:foregroundGravity="fill"
+                            android:foreground="@drawable/ic_baseline_water_drop_24"
+                            android:foregroundGravity="center"
                             android:foregroundTint="#000000" />
 
                         <ImageButton
@@ -405,8 +405,8 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:backgroundTint="#FFFFFF"
-                            android:foreground="@drawable/empty_glass"
-                            android:foregroundGravity="fill"
+                            android:foreground="@drawable/ic_baseline_water_drop_24"
+                            android:foregroundGravity="center"
                             android:foregroundTint="#000000" />
 
                         <ImageButton
@@ -415,8 +415,8 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:backgroundTint="#FFFFFF"
-                            android:foreground="@drawable/empty_glass"
-                            android:foregroundGravity="fill"
+                            android:foreground="@drawable/ic_baseline_water_drop_24"
+                            android:foregroundGravity="center"
                             android:foregroundTint="#000000" />
 
                         <ImageButton
