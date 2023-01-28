@@ -27,10 +27,13 @@ public class NguyenLieuDAO {
 
         while (cursor.moveToNext()) {
             NguyenLieu NL = new NguyenLieu();
-            NL.setMaMA(cursor.getString(cursor.getColumnIndex("MaMA")));
-            NL.setTenMA(cursor.getString(cursor.getColumnIndex("TenMA")));
+            NL.setMaNL(cursor.getString(cursor.getColumnIndex("MaNL")));
+            NL.setTenNL(cursor.getString(cursor.getColumnIndex("TenNL")));
             NL.setSoCalo(cursor.getFloat(cursor.getColumnIndex("SoCalo")));
-            NL.setHinhAnh(cursor.getString(cursor.getColumnIndex("HinhAnh")));
+            NL.setCarbs(cursor.getFloat(cursor.getColumnIndex("Carbs")));
+            NL.setChatDam(cursor.getFloat(cursor.getColumnIndex("ChatDam")));
+            NL.setChatBeo(cursor.getFloat(cursor.getColumnIndex("ChatBeo")));
+            NL.setHinhAnh(cursor.getBlob(cursor.getColumnIndex("HinhAnh")));
             list.add(NL);
         }
         return list;

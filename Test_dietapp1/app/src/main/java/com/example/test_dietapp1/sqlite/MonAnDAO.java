@@ -29,7 +29,7 @@ public class MonAnDAO {
             monAn.setMaMA(cursor.getString(cursor.getColumnIndex("MaMA")));
             monAn.setTenMA(cursor.getString(cursor.getColumnIndex("TenMA")));
             monAn.setSoCalo(cursor.getFloat(cursor.getColumnIndex("SoCalo")));
-            monAn.setHinhAnh(cursor.getString(cursor.getColumnIndex("HinhAnh")));
+            monAn.setHinhAnh(cursor.getBlob(cursor.getColumnIndex("HinhAnh")));
             list.add(monAn);
         }
         return list;

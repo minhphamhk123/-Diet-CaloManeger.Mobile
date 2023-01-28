@@ -5,7 +5,7 @@ public class NguoiDung {
     String TenKhachHang;
     float CanNang;
     float CHieuCao;
-    Boolean GioiTinh;
+    int GioiTinh;
     int TienTrinh;
     String Email;
     String SDT;
@@ -14,7 +14,7 @@ public class NguoiDung {
     public NguoiDung() {
     }
 
-    public NguoiDung(String IDUser, String tenKhachHang, float canNang, float CHieuCao, Boolean gioiTinh, int tienTrinh, String email, String SDT, String tuoi) {
+    public NguoiDung(String IDUser, String tenKhachHang, float canNang, float CHieuCao, int gioiTinh, int tienTrinh, String email, String SDT, String tuoi) {
         this.IDUser = IDUser;
         TenKhachHang = tenKhachHang;
         CanNang = canNang;
@@ -58,11 +58,11 @@ public class NguoiDung {
         this.CHieuCao = CHieuCao;
     }
 
-    public Boolean getGioiTinh() {
+    public int getGioiTinh() {
         return GioiTinh;
     }
 
-    public void setGioiTinh(Boolean gioiTinh) {
+    public void setGioiTinh(int gioiTinh) {
         GioiTinh = gioiTinh;
     }
 

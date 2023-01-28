@@ -30,7 +30,7 @@ public class NguoiDungDAO {
             nguoidung.setTenKhachHang(cursor.getString(cursor.getColumnIndex("TenKhachHang")));
             nguoidung.setCanNang(cursor.getFloat(cursor.getColumnIndex("CanNang")));
             nguoidung.setCHieuCao(cursor.getFloat(cursor.getColumnIndex("ChieuCao")));
-            nguoidung.setGioiTinh(cursor.getBlob(cursor.getColumnIndex("GioiTinh")));
+            nguoidung.setGioiTinh(cursor.getInt(cursor.getColumnIndex("GioiTinh")));
             nguoidung.setTienTrinh(cursor.getInt(cursor.getColumnIndex("TienTrinh")));
             nguoidung.setEmail(cursor.getString(cursor.getColumnIndex("Email")));
             nguoidung.setSDT(cursor.getString(cursor.getColumnIndex("SDT")));

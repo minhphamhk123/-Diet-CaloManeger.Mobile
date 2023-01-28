@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class LichSu {
     String MaNK;
-    Date date;
+    String date;
     int LuongNuocUong;
     int LuongCalo;
     int LuongCarbs;
@@ -14,7 +14,7 @@ public class LichSu {
     public LichSu() {
     }
 
-    public LichSu(String maNK, Date date, int luongNuocUong, int luongCalo, int luongCarbs, int luongProtein, int luongFat) {
+    public LichSu(String maNK, String date, int luongNuocUong, int luongCalo, int luongCarbs, int luongProtein, int luongFat) {
         MaNK = maNK;
         this.date = date;
         LuongNuocUong = luongNuocUong;
@@ -32,11 +32,11 @@ public class LichSu {
         MaNK = maNK;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

@@ -42,7 +42,7 @@ private List<MonAn> list;
             view = LayoutInflater.from(context).inflate(R.layout.fragment_eat_schedule_,null);
         }
 
-        TextView TenMA = view.findViewById(R.id.t);
+        //TextView TenMA = view.findViewById(R.id.t);
         return null;
     }
 }

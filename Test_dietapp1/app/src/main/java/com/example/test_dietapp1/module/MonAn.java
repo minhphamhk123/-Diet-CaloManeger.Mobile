@@ -6,12 +6,12 @@ public class MonAn {
     String MaMA;
     String TenMA;
     float SoCalo;
-    String HinhAnh;
+    byte[] HinhAnh;
 
     public MonAn() {
     }
 
-    public MonAn(String maMA, String tenMA, float soCalo, String hinhAnh) {
+    public MonAn(String maMA, String tenMA, float soCalo, byte[] hinhAnh) {
         MaMA = maMA;
         TenMA = tenMA;
         SoCalo = soCalo;
@@ -42,11 +42,11 @@ public class MonAn {
         SoCalo = soCalo;
     }
 
-    public String getHinhAnh() {
+    public byte[] getHinhAnh() {
         return HinhAnh;
     }
 
-    public void setHinhAnh(String hinhAnh) {
+    public void setHinhAnh(byte[] hinhAnh) {
         HinhAnh = hinhAnh;
     }
 }

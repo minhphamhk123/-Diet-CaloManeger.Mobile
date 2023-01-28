@@ -9,12 +9,12 @@ public class NguyenLieu {
     float Carbs;
     float ChatDam;
     float ChatBeo;
-    Image HinhAnh;
+    byte[] HinhAnh;
 
     public NguyenLieu() {
     }
 
-    public NguyenLieu(String maNL, String tenNL, float soCalo, float carbs, float chatDam, float chatBeo, Image hinhAnh) {
+    public NguyenLieu(String maNL, String tenNL, float soCalo, float carbs, float chatDam, float chatBeo, byte[] hinhAnh) {
         MaNL = maNL;
         TenNL = tenNL;
         SoCalo = soCalo;
@@ -72,11 +72,11 @@ public class NguyenLieu {
         ChatBeo = chatBeo;
     }
 
-    public Image getHinhAnh() {
+    public byte[] getHinhAnh() {
         return HinhAnh;
     }
 
-    public void setHinhAnh(Image hinhAnh) {
+    public void setHinhAnh(byte[] hinhAnh) {
         HinhAnh = hinhAnh;
     }
 }
