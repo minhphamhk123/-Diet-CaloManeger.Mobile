@@ -61,23 +61,24 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <EditText
                         android:id="@+id/et_Finding_Food"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
+                        android:background="@null"
                         android:drawableLeft="@drawable/ic_baseline_search_24"
                         android:drawableTint="@color/black"
                         android:hint="Tìm kiếm..."
                         android:minWidth="300dp"
+                        android:padding="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintHorizontal_bias="0."
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toLeftOf="@id/btn_QR_Food"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:background="@null"
-                        android:padding="10dp"
-                        />
+                        app:layout_constraintVertical_bias="0.0" />
 
                     <ImageButton
                         android:id="@+id/btn_QR_Food"

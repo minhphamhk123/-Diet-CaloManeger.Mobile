@@ -47,6 +47,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.navigation:navigation-fragment:2.5.2'
     implementation 'androidx.navigation:navigation-ui:2.5.2'
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //implementation 'com.gelitenight.waveview:waveview:1.0.0'
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
