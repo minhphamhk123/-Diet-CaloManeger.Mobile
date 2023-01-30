@@ -89,7 +89,7 @@ public class DashboardFragment extends Fragment {
         });
 
         //Adapter Tablayout
-        Testadapter adapter = new Testadapter(getParentFragmentManager(), getLifecycle(), mListCardInfo);
+        Testadapter adapter = new Testadapter(getChildFragmentManager(), getLifecycle(), mListCardInfo);
         fragmentViewCard.setAdapter(adapter);
 
         new TabLayoutMediator(optionTab, fragmentViewCard, (tab, position) -> {

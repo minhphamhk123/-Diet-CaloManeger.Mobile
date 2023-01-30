@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="#EBEBEB"
     android:theme="@style/ThemeOverlay.Test_dietapp1.FullscreenContainer"
-    tools:context=".ui.addinfab.fragment_eat_schedule">
+    tools:context=".ui.addinfab.fragment_eat_schedule"
+    android:backgroundTint="@color/white">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
