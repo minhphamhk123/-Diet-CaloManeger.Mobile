@@ -11,12 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.test_dietapp1.MainActivity;
 import com.example.test_dietapp1.R;
 import com.example.test_dietapp1.databinding.FragmentDashboardBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,7 +89,7 @@ public class DashboardFragment extends Fragment {
         });
 
         //Adapter Tablayout
-        Testadapter adapter = new Testadapter(getParentFragmentManager(), getLifecycle(), mListCardInfo);
+        Testadapter adapter = new Testadapter(getChildFragmentManager(), getLifecycle(), mListCardInfo);
         fragmentViewCard.setAdapter(adapter);
 
         new TabLayoutMediator(optionTab, fragmentViewCard, (tab, position) -> {
