@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListPreference
+        android:key="result"
+        android:entries="@array/result"
+        android:title="@string/muctieu"
+        android:entryValues="@array/resultValue"
+        app:useSimpleSummaryProvider="true"
+        android:summary="Mục tiêu của bạn là gì?">
+    </ListPreference>
+    <EditTextPreference
+        android:defaultValue="0"
+        android:key="kcal/day"
+        android:title="Kcal/ngày"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:dialogTitle="Kcal/Ngày"
+        app:useSimpleSummaryProvider="true"
+        android:inputType="number">
+    </EditTextPreference>
+    <EditTextPreference
+        android:defaultValue="0"
+        android:key="height"
+        android:title="Chiều cao(cm)"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:dialogTitle="Chiều cao(cm)"
+        app:useSimpleSummaryProvider="true"
+        android:inputType="number">
+    </EditTextPreference>
+    <EditTextPreference
+        android:defaultValue="0"
+        android:key="weight"
+        android:title="Cân nặng(kg)"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:dialogTitle="Cân nặng(kg)"
+        app:useSimpleSummaryProvider="true"
+        android:inputType="number">
+    </EditTextPreference>
+    <EditTextPreference
+        android:defaultValue="0"
+        android:key="age"
+        android:title="Tuổi"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:dialogTitle="Tuổi"
+        app:useSimpleSummaryProvider="true"
+        android:inputType="number">
+    </EditTextPreference>
+    <ListPreference
+        android:key="gender"
+        android:entries="@array/gender"
+        android:title="@string/gioitinh"
+        android:entryValues="@array/resultGender"
+        app:useSimpleSummaryProvider="true"
+        android:summary="Giới tính của bạn?">
+    </ListPreference>
+    <ListPreference
+        android:key="luyentap"
+        android:entries="@array/cuongdo"
+        android:title="@string/cuongdoltap"
+        app:useSimpleSummaryProvider="true"
+        android:entryValues="@array/resultCuongdo">
+    </ListPreference>
+    <SwitchPreference
+        android:key="check1"
+        android:title="@string/check1"
+        android:defaultValue="fasle">
+    </SwitchPreference>
+</PreferenceScreen>
+

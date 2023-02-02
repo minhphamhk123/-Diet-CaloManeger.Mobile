@@ -53,9 +53,6 @@
             android:id="@+id/action_settingFragment_to_navigation_notifications"
             app:destination="@id/navigation_notifications" />
         <action
-            android:id="@+id/action_settingFragment_to_BMRFragment"
-            app:destination="@id/BMRFragment" />
-        <action
             android:id="@+id/action_settingFragment_to_watterFragment"
             app:destination="@id/watterFragment" />
         <action
@@ -64,15 +61,9 @@
         <action
             android:id="@+id/action_settingFragment_self"
             app:destination="@id/settingFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/BMRFragment"
-        android:name="com.example.test_dietapp1.ui.notifications.BMRFragment"
-        android:label="fragment_b_m_r"
-        tools:layout="@layout/fragment_b_m_r" >
         <action
-            android:id="@+id/action_BMRFragment_to_settingFragment"
-            app:destination="@id/settingFragment" />
+            android:id="@+id/action_settingFragment_to_BMRFragment"
+            app:destination="@id/BMRFragment" />
     </fragment>
     <fragment
         android:id="@+id/watterFragment"
@@ -90,6 +81,14 @@
         tools:layout="@layout/fragment_macro" >
         <action
             android:id="@+id/action_macroFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BMRFragment"
+        android:name="com.example.test_dietapp1.ui.notifications.BMRFragment"
+        android:label="BMRFragment" >
+        <action
+            android:id="@+id/action_BMRFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
     </fragment>
 </navigation>
