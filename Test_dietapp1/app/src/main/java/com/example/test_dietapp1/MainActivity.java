@@ -1,10 +1,9 @@
 package com.example.test_dietapp1;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-
-import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -13,10 +12,19 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.test_dietapp1.databinding.ActivityMainBinding;
+import com.example.test_dietapp1.sqlite.DatabaseHandler;
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import okhttp3.OkHttpClient;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+
+    OkHttpClient client  = new OkHttpClient();
+    TextView txtResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
                 Dinner_button.setVisibility(View.GONE);
             }
         });
+        txtResult = (TextView) findViewById(R.id.tv_bodyMetrics);
+
+        //Database
+        DatabaseHandler DBHandler = new DatabaseHandler(this);
+        final SQLiteDatabase readableDatabase = DBHandler.getReadableDatabase();
+        readableDatabase.close();
+
     }
 
 }

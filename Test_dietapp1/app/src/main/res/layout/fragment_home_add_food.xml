@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="ui.homefood.fragment_home_add_food">
+    tools:context=".ui.dashboard.DashboardFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,6 +26,7 @@
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:id="@+id/feature_bar"
                 android:layout_width="match_parent"
@@ -35,24 +36,23 @@
 
                 <SearchView
                     android:id="@+id/search_view_food"
-                    android:layout_width="250sp"
+                    android:layout_width="252dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
-                    android:layout_marginTop="8sp"
-                    android:layout_marginBottom="8sp"
+                    android:autoSizeTextType="uniform"
                     android:background="@drawable/ic_border_searchview"
                     android:foregroundTint="#FFFFFF"
-                    android:submitBackground="@drawable/ic_border_searchview"
                     android:iconifiedByDefault="false"
                     android:queryBackground="@android:color/transparent"
                     android:queryHint="Tìm kiếm..."
-                    android:searchIcon="@null"/>
+                    android:searchIcon="@null"
+                    android:submitBackground="@drawable/ic_border_searchview" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/btn_search"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15sp"
+                    android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:clickable="true"
                     android:foreground="@android:drawable/ic_menu_search"
@@ -67,7 +67,7 @@
                     android:id="@+id/btn_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10sp"
+                    android:layout_marginHorizontal="10dp"
                     android:layout_weight="1"
                     android:clickable="true"
                     android:foreground="@drawable/ic_baseline_add_24"
@@ -79,30 +79,18 @@
                     app:elevation="6dp" />
             </LinearLayout>
         </LinearLayout>
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
-            android:layout_below="@+id/home_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabSelectedTextColor="#4CAF50"  >
+            android:layout_below="@+id/home_header"
+            app:tabSelectedTextColor="#4CAF50" />
 
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabMonan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Món ăn" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabThucpham"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Thực phẩm" />
-
-        </com.google.android.material.tabs.TabLayout>
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
-            android:layout_below="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"    />
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tab_layout" />
     </RelativeLayout>
-</FrameLayout>
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.test_dietapp1.ui.homefood;
+package com.example.test_dietapp1.ui.dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,15 +6,15 @@ import android.os.Bundle;
 
 import com.example.test_dietapp1.R;
 
-public class activity_add_food extends AppCompatActivity {
+public class AddFoodStuffActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        this.setTitle("Tạo mới món ăn");
+        this.setTitle("Tạo thực phẩm mới");
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_food);
+        setContentView(R.layout.activity_add_foodstuff);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
