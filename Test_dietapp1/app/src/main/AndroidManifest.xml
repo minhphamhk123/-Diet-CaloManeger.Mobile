@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,43 +17,31 @@
         tools:replace="android:theme"
         tools:targetApi="31">
         <activity
-            android:name=".WatterSetting"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".ui.notifications.BMRActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bmractivity"
+            android:parentActivityName=".ui.notifications.SettingActivity"/>
         <activity
-            android:name=".BMRSetting"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".ui.notifications.SettingActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".Setting"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".ui.notifications.WatterActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.notifications.SettingActivity"/>
         <activity
-            android:name=".SettingActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".ui.notifications.MacroActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.notifications.SettingActivity"/>
         <activity
             android:name=".ui.dashboard.AddFoodActivity"
-            android:label="@string/app_name"
-            android:exported="true">
-        </activity>
+            android:exported="true"
+            android:label="@string/app_name" />
         <activity
             android:name=".ui.dashboard.AddFoodStuffActivity"
-            android:label="@string/app_name"
-            android:exported="true">
-        </activity>
+            android:exported="true"
+            android:label="@string/app_name" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -71,7 +61,6 @@
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
             android:theme="@style/zxing_CaptureTheme" />
-
     </application>
 
 </manifest>

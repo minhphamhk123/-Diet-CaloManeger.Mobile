@@ -33,7 +33,8 @@ public class NotificationsFragment extends Fragment {
         btn_ic_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_notifications_to_settingFragment);
+                Intent in = new Intent(getActivity(),SettingActivity.class);
+                startActivity(in);
             }
         });
         return root;

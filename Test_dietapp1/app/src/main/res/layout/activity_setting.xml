@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".ui.notifications.SettingFragment">
+    tools:context=".ui.notifications.SettingActivity">
 
     <Button
         android:id="@+id/btn1"

@@ -2,72 +2,64 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ListPreference
-        android:key="result"
         android:entries="@array/result"
-        android:title="@string/muctieu"
         android:entryValues="@array/resultValue"
-        app:useSimpleSummaryProvider="true"
-        android:summary="Mục tiêu của bạn là gì?">
-    </ListPreference>
+        android:key="result"
+        android:summary="Mục tiêu của bạn là gì?"
+        android:title="@string/muctieu"
+        app:useSimpleSummaryProvider="true"></ListPreference>
     <EditTextPreference
         android:defaultValue="0"
-        android:key="kcal/day"
-        android:title="Kcal/ngày"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
         android:dialogTitle="Kcal/Ngày"
-        app:useSimpleSummaryProvider="true"
-        android:inputType="number">
-    </EditTextPreference>
-    <EditTextPreference
-        android:defaultValue="0"
-        android:key="height"
-        android:title="Chiều cao(cm)"
+        android:inputType="number"
+        android:key="kcal/day"
         android:selectAllOnFocus="true"
         android:singleLine="true"
+        android:title="Kcal/ngày"
+        app:useSimpleSummaryProvider="true"></EditTextPreference>
+    <EditTextPreference
+        android:defaultValue="0"
         android:dialogTitle="Chiều cao(cm)"
-        app:useSimpleSummaryProvider="true"
-        android:inputType="number">
-    </EditTextPreference>
-    <EditTextPreference
-        android:defaultValue="0"
-        android:key="weight"
-        android:title="Cân nặng(kg)"
+        android:inputType="number"
+        android:key="height"
         android:selectAllOnFocus="true"
         android:singleLine="true"
+        android:title="Chiều cao(cm)"
+        app:useSimpleSummaryProvider="true"></EditTextPreference>
+    <EditTextPreference
+        android:defaultValue="0"
         android:dialogTitle="Cân nặng(kg)"
-        app:useSimpleSummaryProvider="true"
-        android:inputType="number">
-    </EditTextPreference>
-    <EditTextPreference
-        android:defaultValue="0"
-        android:key="age"
-        android:title="Tuổi"
+        android:inputType="number"
+        android:key="weight"
         android:selectAllOnFocus="true"
         android:singleLine="true"
+        android:title="Cân nặng(kg)"
+        app:useSimpleSummaryProvider="true"></EditTextPreference>
+    <EditTextPreference
+        android:defaultValue="0"
         android:dialogTitle="Tuổi"
-        app:useSimpleSummaryProvider="true"
-        android:inputType="number">
-    </EditTextPreference>
+        android:inputType="number"
+        android:key="age"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Tuổi"
+        app:useSimpleSummaryProvider="true"></EditTextPreference>
     <ListPreference
-        android:key="gender"
         android:entries="@array/gender"
-        android:title="@string/gioitinh"
         android:entryValues="@array/resultGender"
-        app:useSimpleSummaryProvider="true"
-        android:summary="Giới tính của bạn?">
-    </ListPreference>
+        android:key="gender"
+        android:summary="Giới tính của bạn?"
+        android:title="@string/gioitinh"
+        app:useSimpleSummaryProvider="true"></ListPreference>
     <ListPreference
-        android:key="luyentap"
         android:entries="@array/cuongdo"
+        android:entryValues="@array/resultCuongdo"
+        android:key="luyentap"
         android:title="@string/cuongdoltap"
-        app:useSimpleSummaryProvider="true"
-        android:entryValues="@array/resultCuongdo">
-    </ListPreference>
+        app:useSimpleSummaryProvider="true"></ListPreference>
     <SwitchPreference
+        android:defaultValue="fasle"
         android:key="check1"
-        android:title="@string/check1"
-        android:defaultValue="fasle">
-    </SwitchPreference>
+        android:title="@string/check1"></SwitchPreference>
 </PreferenceScreen>
 
