@@ -16,9 +16,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.test_dietapp1.R;
 import com.example.test_dietapp1.databinding.FragmentEatScheduleBinding;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 
@@ -53,6 +55,7 @@ public class fragment_eat_schedule extends Fragment {
      * while interacting with activity UI.
      */
     private FragmentEatScheduleBinding binding;
+    private String fragment_eat_schedule = "fragment_eat_schedule";
 
     @Nullable
     @Override
@@ -60,12 +63,14 @@ public class fragment_eat_schedule extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_eat_schedule_, container,false);
+        //Xoa het fragment stack o dang sau
+        ((AppCompatActivity)getContext()).getSupportFragmentManager().popBackStack( fragment_eat_schedule, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         btnClick = (ImageButton) rootView.findViewById(R.id.btn_Close);
         txtSearch = (EditText) rootView.findViewById(R.id.et_Finding_Food);
         btnClick.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                getActivity().getFragmentManager().popBackStack();
+                getActivity().onBackPressed();
             }
         });
         binding = FragmentEatScheduleBinding.inflate(inflater, container, false);

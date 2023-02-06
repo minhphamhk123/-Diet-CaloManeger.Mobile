@@ -119,6 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
+                    android:backgroundTint="#4CAF50"
                     android:drawableLeft="@drawable/ic_baseline_favorite_24"
                     android:text="Tạo món ăn mới"
                     android:textAllCaps="false" />
@@ -127,10 +128,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="5dp"
+                    android:backgroundTint="#4CAF50"
                     android:drawableLeft="@drawable/ic_baseline_local_fire_department_24"
                     android:drawableTint="@color/white"
                     android:text="Thêm calo"
-                    android:textAllCaps="false"/>
+                    android:textAllCaps="false" />
             </LinearLayout>
         </HorizontalScrollView>
     </RelativeLayout>

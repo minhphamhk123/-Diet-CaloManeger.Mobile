@@ -14,6 +14,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.test_dietapp1.databinding.ActivityMainBinding;
 import com.example.test_dietapp1.sqlite.DatabaseHandler;
 import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import okhttp3.OkHttpClient;
@@ -41,25 +42,38 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        final FloatingActionsMenu Float_btn = (FloatingActionsMenu) findViewById(R.id.fab_menu);
         final FloatingActionButton BF_button = (FloatingActionButton) findViewById(R.id.Breakfast);
         BF_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
                 navController.navigate(R.id.navigation_eat_schedule);
+                Float_btn.collapse();
             }
         });
         final FloatingActionButton Lunch_button = (FloatingActionButton) findViewById(R.id.Lunch);
         Lunch_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                navController.navigate(R.id.navigation_exercise_schedule);
+                navController.navigate(R.id.navigation_eat_schedule);
+                Float_btn.collapse();
             }
         });
         final FloatingActionButton Dinner_button = (FloatingActionButton) findViewById(R.id.Dinner);
         Dinner_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                Dinner_button.setVisibility(View.GONE);
+                navController.navigate(R.id.navigation_eat_schedule);
+                Float_btn.collapse();
+            }
+        });
+        final FloatingActionButton Exer_btn = (FloatingActionButton) findViewById(R.id.Exercise);
+        Exer_btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // your handler code here
+                navController.navigate(R.id.navigation_exercise_schedule);
+                Float_btn.collapse();
             }
         });
         txtResult = (TextView) findViewById(R.id.tv_bodyMetrics);
