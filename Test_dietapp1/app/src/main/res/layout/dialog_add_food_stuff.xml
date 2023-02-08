@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+    <EditText
+        android:id="@+id/txt_name_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên thực phẩm"/>
+    <EditText
+        android:id="@+id/txt_calo"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="kcal (bắt buộc)"
+        android:layout_below="@+id/txt_name_food"/>
+    <EditText
+        android:id="@+id/txt_carbs"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="carbs"
+        android:layout_below="@+id/txt_calo"/>
+    <EditText
+        android:id="@+id/txt_fat"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="fat"
+        android:layout_below="@+id/txt_carbs"/>
+    <EditText
+        android:id="@+id/txt_protein"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="protein"
+        android:layout_below="@+id/txt_fat"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_protein"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:textColor="@color/light_blue_600"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginRight="30dp"
+            android:text="Bỏ qua" />
+
+        <TextView
+            android:id="@+id/btn_add_stuff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Thêm"
+            android:textColor="@color/light_blue_600"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

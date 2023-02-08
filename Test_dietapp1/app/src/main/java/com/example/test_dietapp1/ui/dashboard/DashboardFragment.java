@@ -70,7 +70,7 @@ public class DashboardFragment extends Fragment {
         });
 
 
-        //Lấy chỉ sốị của tablayout được chọn
+        //Lấy chỉ số của tablayout được chọn
         optionTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -89,7 +89,7 @@ public class DashboardFragment extends Fragment {
         });
 
         //Adapter Tablayout
-        Testadapter adapter = new Testadapter(getChildFragmentManager(), getLifecycle(), mListCardInfo);
+        Testadapter adapter = new Testadapter(this, mListCardInfo);
         fragmentViewCard.setAdapter(adapter);
 
         new TabLayoutMediator(optionTab, fragmentViewCard, (tab, position) -> {
@@ -119,7 +119,7 @@ public class DashboardFragment extends Fragment {
     private List<CardInfo> getListCardInfo() {
         List<CardInfo> list = new ArrayList<>();
         for (int i = 0; i < 2; ++i) {
-            list.add(new CardInfo(new String[] {"Tiêu đề " + (i+1), "Nội dung " + (i+1), "Lưu ý: " + (i+1)}));
+            list.add(new CardInfo("Tieu de " + i, "Noi dung " + i));
         }
         return list;
     }

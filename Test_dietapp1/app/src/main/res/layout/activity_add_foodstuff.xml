@@ -199,14 +199,17 @@
                             android:textSize="18sp" />
 
                         <EditText
+                            android:id="@+id/unit_number"
                             android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:layout_marginRight="10dp"
+                            android:inputType="number"
                             android:background="@drawable/bg_corner_edittext"
                             android:gravity="center"
                             android:hint="100" />
 
                         <Spinner
+                            android:id="@+id/unit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/layout_corner_shape"

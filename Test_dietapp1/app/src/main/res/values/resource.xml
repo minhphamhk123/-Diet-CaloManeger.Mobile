@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="option_array">
+        <item>Khẩu phần ăn tùy chỉnh</item>
+        <item>Phần ăn (100g)</item>
+        <item>Muỗng cà phê (tsp)</item>
+        <item>Muỗng canh (Tbsp)</item>
+        <item>Cốc (cup)</item>
+    </string-array>
+    <string-array name="unit_array">
+        <item>grams (g)</item>
+        <item>millimit (ml)</item>
+    </string-array>
+</resources>
