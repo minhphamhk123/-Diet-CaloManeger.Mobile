@@ -1,39 +1,30 @@
-package com.example.test_dietapp1.ui.addinfab;
+package com.example.test_dietapp1;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-
-import com.example.test_dietapp1.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link fragment_exercise_schedule#newInstance} factory method to
+ * Use the {@link Login#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragment_exercise_schedule extends Fragment {
+public class Login extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // Elements
-
-    private ImageButton closeBtn;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private String fragment_exercise_schedule = "fragment_exercise_schedule";
 
-    public fragment_exercise_schedule() {
+    public Login() {
         // Required empty public constructor
     }
 
@@ -43,11 +34,11 @@ public class fragment_exercise_schedule extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment fragment_exercise_schedule.
+     * @return A new instance of fragment Login.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment_exercise_schedule newInstance(String param1, String param2) {
-        fragment_exercise_schedule fragment = new fragment_exercise_schedule();
+    public static Login newInstance(String param1, String param2) {
+        Login fragment = new Login();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,18 +58,7 @@ public class fragment_exercise_schedule extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_exercise_schedule, container,false);
-        //Xoa het fragment stack o dang sau
-        ((AppCompatActivity)getContext()).getSupportFragmentManager().popBackStack( fragment_exercise_schedule, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        closeBtn = rootView.findViewById(R.id.btn_Close);
-        closeBtn.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                // your handler code here
-                getActivity().onBackPressed();
-            }
-        });
-
         // Inflate the layout for this fragment
-        return rootView;    //inflater.inflate(R.layout.fragment_exercise_schedule, container, false);
+        return inflater.inflate(R.layout.fragment_login, container, false);
     }
 }

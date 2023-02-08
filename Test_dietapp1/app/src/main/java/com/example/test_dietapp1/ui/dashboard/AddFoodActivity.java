@@ -7,6 +7,7 @@ import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,7 +43,6 @@ public class AddFoodActivity extends AppCompatActivity  implements View.OnClickL
         this.setTitle("Tạo mới món ăn");
         setContentView(R.layout.activity_add_food);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         TenMonAn = (EditText) findViewById(R.id.editTextTextMultiLine);
         btn_upload = (AppCompatImageButton) findViewById(R.id.imageButton);
         btn_upload.setOnClickListener(this);
