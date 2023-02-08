@@ -82,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
         DatabaseHandler DBHandler = new DatabaseHandler(this);
         final SQLiteDatabase readableDatabase = DBHandler.getReadableDatabase();
         readableDatabase.close();
-
     }
 
 }

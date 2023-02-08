@@ -34,7 +34,7 @@
             app:layout_constraintVertical_bias="0.04" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="88g"
@@ -58,7 +58,7 @@
             app:layout_constraintVertical_bias="0.04" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/CaloTieu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="790"
@@ -132,7 +132,7 @@
         app:layout_constraintVertical_bias="0.423">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/CaloNap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chất đạm"

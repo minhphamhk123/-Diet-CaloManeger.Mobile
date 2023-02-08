@@ -52,7 +52,7 @@
         tools:layout_editor_absoluteY="184dp"></Button>
 
     <Button
-        android:id="@+id/btn4"
+        android:id="@+id/LogOut"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

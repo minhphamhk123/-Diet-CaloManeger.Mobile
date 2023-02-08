@@ -11,6 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.test_dietapp1.databinding.FragmentHomeBinding;
+import com.example.test_dietapp1.module.NguoiDung;
+import com.example.test_dietapp1.sqlite.DangNhapDAO;
+import com.example.test_dietapp1.sqlite.NguoiDungDAO;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 public class HomeFragment extends Fragment {
 
@@ -24,6 +29,10 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        NguoiDungDAO nd = new NguoiDungDAO(root.getContext());
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(root.getContext());
+
+        NguoiDung newNgD = nd.getByMaMA(account.getId());
         //final TextView textView = binding.textHome;
         //homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;

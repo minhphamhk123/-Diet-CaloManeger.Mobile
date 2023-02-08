@@ -139,12 +139,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rl_menuFood">
 
-        <LinearLayout
+        <!--LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -493,6 +494,11 @@
                     </androidx.cardview.widget.CardView>
                 </RelativeLayout>
             </com.google.android.material.chip.ChipGroup>
-        </LinearLayout>
+        </LinearLayout-->
+        <ListView
+            android:id="@+id/listReminder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
