@@ -80,7 +80,7 @@ public class fragment_eat_schedule extends Fragment {
 
     private void scanCode() {
         ScanOptions scanner = new ScanOptions();
-        scanner.setPrompt("Quét mã QR");
+        scanner.setPrompt("Đưa camera vào khu vực cần quét");
         scanner.setBeepEnabled(true);
         scanner.setOrientationLocked(true);
         scanner.setCaptureActivity(CaptureAct.class);

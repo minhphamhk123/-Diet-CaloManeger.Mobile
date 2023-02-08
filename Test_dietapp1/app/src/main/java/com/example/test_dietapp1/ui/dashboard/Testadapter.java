@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
@@ -14,6 +13,10 @@ import java.util.List;
 public class Testadapter extends FragmentStateAdapter {
 
     private List<CardInfo> mListCardInfo;
+    public Testadapter(Fragment fragment,  List<CardInfo> list) {
+        super(fragment);
+        this.mListCardInfo = list;
+    }
 
     public Testadapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle, List<CardInfo> list) {
         super(fragmentManager, lifecycle);

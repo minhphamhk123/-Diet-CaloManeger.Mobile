@@ -81,19 +81,31 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="1.0"
                             app:layout_constraintStart_toEndOf="@+id/label1"
-                            tools:layout_editor_absoluteY="0dp" />
+                            tools:ignore="SmallSp"
+                            android:layout_marginLeft="5dp"/>
 
-                        <ImageButton
+                        <androidx.appcompat.widget.AppCompatImageButton
                             android:id="@+id/imageButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@android:drawable/ic_menu_upload"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/imageView"
                             app:layout_constraintHorizontal_bias="0.25"
                             app:layout_constraintStart_toEndOf="@+id/label2"
                             app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
                             app:layout_constraintVertical_bias="1.0" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="63dp"
+                            android:layout_height="59dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageButton"
+                            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
+                            app:layout_constraintVertical_bias="1.0"
+                            tools:srcCompat="@tools:sample/avatars" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -123,7 +135,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/title2" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btn_add_stuff"
                     style="@style/Widget.MaterialComponents.Button.Icon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

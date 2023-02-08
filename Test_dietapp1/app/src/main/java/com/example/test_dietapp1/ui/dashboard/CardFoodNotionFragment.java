@@ -34,9 +34,9 @@ public class CardFoodNotionFragment extends Fragment {
         if (bundleInfo != null) {
             CardInfo cardInfo = (CardInfo) bundleInfo.get("card_info_obj");
             if (cardInfo != null) {
-                titleCard.setText(cardInfo.getArrInfo()[0]);
-                contentCard.setText(cardInfo.getArrInfo()[1]);
-                notionCard.setText(cardInfo.getArrInfo()[2]);
+                titleCard.setText(cardInfo.getTitle());
+                contentCard.setText(cardInfo.getContent());
+                notionCard.setText("Nhấn vào nút (+) góc trên bên phải để thêm mới món ăn yêu thích của riêng bạn");
             }
         }
 
