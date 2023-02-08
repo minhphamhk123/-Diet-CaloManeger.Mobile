@@ -14,19 +14,37 @@ import com.example.test_dietapp1.sqlite.DangNhapDAO;
 import com.example.test_dietapp1.sqlite.NguoiDungDAO;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 public class StartApp extends AppCompatActivity {
 
     Button Email_btn, Guest_btn;
+    /*GoogleSignInOptions gso;
+    GoogleSignInClient gsc;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_app);
         getSupportActionBar().hide();
+        /*gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).
 
+                requestEmail().
+
+                build();
+
+        gsc = GoogleSignIn.getClient(this, gso);
+        SignOut();*/
         DangNhapDAO dao = new DangNhapDAO(this);
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        if(account != null&&dao.getByID(account.getId())!=null){NavigateToMainActivity();}
+        try {if(account != null&&dao.getByID(account.getId()).getID().isEmpty() != true){NavigateToMainActivity();
+            return;
+        }}catch (Exception e)
+        {
+
+        }
         Email_btn = (Button) findViewById(R.id.LoginEmail);
         Guest_btn = (Button) findViewById(R.id.LoginGuest);
 
@@ -62,4 +80,14 @@ public class StartApp extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
+    /*void SignOut(){
+        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>(){
+            @Override
+            public void onComplete(Task<Void> task) {
+                finish();
+                startActivity(new Intent(StartApp.this, StartApp.class));
+            }
+        });
+    }*/
+
 }

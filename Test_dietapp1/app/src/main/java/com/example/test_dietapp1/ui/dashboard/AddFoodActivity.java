@@ -54,7 +54,7 @@ public class AddFoodActivity extends AppCompatActivity  implements View.OnClickL
     }
 
     private boolean CheckAllFields() {
-        if (TenMonAn.length() == 0) {
+        if (TenMonAn.getText().length() == 0) {
             TenMonAn.setError("Không được để trống!");
             return false;
         }

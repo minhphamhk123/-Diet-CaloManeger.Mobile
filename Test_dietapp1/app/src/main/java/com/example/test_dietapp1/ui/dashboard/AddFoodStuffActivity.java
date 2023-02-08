@@ -96,15 +96,15 @@ public class AddFoodStuffActivity extends AppCompatActivity {
         }
     }
     private boolean CheckAllFields() {
-        if (txt_name.length() == 0) {
+        if (txt_name.getText().length() == 0) {
             txt_name.setError("Không được để trống tên!");
             return false;
         }
-        if (txt_unit1.length() == 0) {
-            txt_name.setError("Điền vào đây!");
+        if (txt_unit1.getText().length() == 0) {
+            txt_unit1.setError("Điền vào đây!");
             return false;
         }
-        if (txt_unit2.length() == 0 && option.getSelectedItemPosition() == 0) {
+        if (txt_unit2.getText().length() == 0 && option.getSelectedItemPosition() == 0) {
             txt_unit2.setError("Bắt buộc!");
             return false;
         }

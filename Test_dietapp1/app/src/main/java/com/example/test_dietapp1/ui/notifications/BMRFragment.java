@@ -14,8 +14,11 @@ import androidx.preference.SwitchPreference;
 
 import com.example.test_dietapp1.R;
 import com.example.test_dietapp1.module.NguoiDung;
+import com.example.test_dietapp1.sqlite.DangNhapDAO;
 import com.example.test_dietapp1.sqlite.DatabaseHandler;
 import com.example.test_dietapp1.sqlite.NguoiDungDAO;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 public class BMRFragment extends PreferenceFragmentCompat {
 
@@ -26,7 +29,10 @@ public class BMRFragment extends PreferenceFragmentCompat {
         DatabaseHandler db = new DatabaseHandler(getContext());
         SQLiteDatabase database = db.getReadableDatabase();
         database.close();
-        //loadSetting(idUser);
+
+        DangNhapDAO dao = new DangNhapDAO(getContext());
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getContext());
+        loadSetting(account.getId());
 
 
 
@@ -37,7 +43,9 @@ public class BMRFragment extends PreferenceFragmentCompat {
     }
     @Override
     public void onStop(){
-        //saveSetting(idUser);
+        DangNhapDAO dao = new DangNhapDAO(requireContext());
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(requireContext());
+        saveSetting(account.getId());
         super.onStop();
     }
     public void loadSetting(String id)
@@ -86,6 +94,5 @@ public class BMRFragment extends PreferenceFragmentCompat {
         nguoiDung.setTuoi(String.valueOf(ageVal));
         nguoiDung.setGioiTinh(genderVal);
         nguoiDungDAO.updateNguoiDung(nguoiDung);
-
     }
 }

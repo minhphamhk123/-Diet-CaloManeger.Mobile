@@ -11,12 +11,15 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.test_dietapp1.sqlite.DangNhapDAO;
+import com.example.test_dietapp1.ui.notifications.SettingActivity;
 import com.example.test_dietapp1.ui.startup.SetUpForUser;
+import com.example.test_dietapp1.ui.startup.StartApp;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class LoginActivity extends AppCompatActivity {
@@ -31,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        getSupportActionBar().hide();
 
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).
@@ -43,7 +46,6 @@ public class LoginActivity extends AppCompatActivity {
         gsc = GoogleSignIn.getClient(this, gso);
 
         google_btn = findViewById(R.id.google_btn);
-
         google_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,8 +88,11 @@ public class LoginActivity extends AppCompatActivity {
     {
         DangNhapDAO dangNhapDAO = new DangNhapDAO(this);
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        if(account != null&&dangNhapDAO.getByID(account.getId())!=null){NavigateToMainActivity();
+        try {if(account != null&&dangNhapDAO.getByID(account.getId()).getID()!=null){NavigateToMainActivity();
         return;
+        }}catch (Exception e)
+        {
+
         }
         Intent intent = new Intent(LoginActivity.this, SetUpForUser.class);
         startActivity(intent);
@@ -100,4 +105,14 @@ public class LoginActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
+
+    /*void SignOut(){
+        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>(){
+            @Override
+            public void onComplete(Task<Void> task) {
+                finish();
+                startActivity(new Intent(LoginActivity.this, StartApp.class));
+            }
+        });
+    }*/
 }

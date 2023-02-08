@@ -56,8 +56,11 @@ public class SetUpForUser extends AppCompatActivity {
             personEmail = acct.getEmail();
             ID = acct.getId();
             DangNhap dangNhap = new DangNhap(ID,personEmail,"Example");
-            if(dangNhapDAO.getByID(ID) != dangNhap)
+            try{if(dangNhapDAO.getByID(ID) != dangNhap)
+                dangNhapDAO.insertDangNhap(dangNhap);}
+            catch (Exception e) {
                 dangNhapDAO.insertDangNhap(dangNhap);
+            }
         }
 
         male = (ToggleButton) findViewById(R.id.SexMale);
