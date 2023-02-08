@@ -3,17 +3,24 @@ package com.example.test_dietapp1.ui.dashboard;
 import java.io.Serializable;
 
 public class CardInfo implements Serializable {
-    private String[] arrInfo;
+    private String content;
+    private String title;
 
-    public CardInfo(String[] arrInfo) {
-        this.arrInfo = arrInfo;
+    public CardInfo(String mTitle, String mContent) {
+        this.content = mContent;
+        this.title = mTitle;
     }
 
-    public String[] getArrInfo() {
-        return arrInfo;
+    public String getTitle() {
+        return this.title;
     }
-
-    public void setArrInfo(String[] arrInfo) {
-        this.arrInfo = arrInfo;
+    public String getContent() {
+        return this.content;
+    }
+    public void setTitle(String mTitle) {
+        this.title = mTitle;
+    }
+    public void setContent(String mContent) {
+        this.content = mContent;
     }
 }
